@@ -44,7 +44,7 @@ Tags explanation:
 
 Execution instructions
 After cloning the project please follow the below instructions:
-1. Open Terminal and make sure you are in the meta-weather-api-bdd folder by typing:
+1. Open Terminal and make sure you are in the InterviewAdidas folder by typing:
    cd ~/; cd $(find **/InterviewAdidas -type d -name InterviewAdidas)
 2. Input following maven command to verify and generate report (failed build due to bug):
    mvn clean verify

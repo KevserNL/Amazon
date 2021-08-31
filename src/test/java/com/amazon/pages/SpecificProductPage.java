@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class SpecificProductPage extends BasePage {
 
-    @FindBy(id = "buybox-see-all-buying-choices")
+    @FindBy(xpath = "(//span[@id='exportAlternativeTriggerButton-announce'])")
     public WebElement seeAllBuyingOptions;
 
     @FindBy(xpath = "(//input[@name='submit.addToCart'])")
@@ -21,12 +21,12 @@ public class SpecificProductPage extends BasePage {
     @FindBy(xpath = "//span[@id='size_name_0_price']//p")
     public WebElement selectedProductPrice;
 
-    @FindBy(id = "attach-accessory-proceed-to-checkout-text")
+    @FindBy(css= ".a-button-text.a-text-center")
     public WebElement proceedToCheckout;
 
     public void addingToCart(){
         try {
-            seeAllBuyingOptions.click();
+            BrowserUtils.clickWithJS(seeAllBuyingOptions);
             BrowserUtils.clickWithJS(addToCart);
         }catch (NoSuchElementException e){
             BrowserUtils.clickWithJS(addToCart2);

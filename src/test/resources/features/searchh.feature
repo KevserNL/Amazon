@@ -22,12 +22,12 @@ Feature: Searching feature
     When the user searches for "<itemName>"
     And the user selects the result containing "<itemSubtitle>"
     And the user adds the selected product to the basket
-    And the user clicks Proceed to Checkout
-    Then the user should see the "<pageTitle>" in the title
+    Then the user clicks Proceed to Checkout
+
     Examples:
-      | itemName    | itemSubtitle                          | pageTitle      |
-      | Monitor     | Acer R240HY bidx 23.8-Inch            | Amazon Sign-In |
-      | Dell Laptop | 2021 Newest Dell Inspiron 3000 Laptop | Amazon Sign-In |
+      | itemName    | itemSubtitle                          |
+      | Monitor     | Acer R240HY bidx 23.8-Inch            |
+      | Dell Laptop | 2021 Newest Dell Inspiron 3000 Laptop |
 
 
 

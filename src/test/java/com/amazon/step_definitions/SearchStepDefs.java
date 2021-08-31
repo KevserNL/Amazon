@@ -2,12 +2,11 @@ package com.amazon.step_definitions;
 
 
 
-import com.amazon.pages.ProductSearchingPage;
-import com.amazon.pages.SpecificProductPage;
-import com.amazon.utilities.BrowserUtils;
-import com.amazon.utilities.Driver;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+
+import java.sql.Driver;
 
 import static org.junit.Assert.*;
 
@@ -26,15 +25,22 @@ public class SearchStepDefs {
     }
 
     @Then("the user should see the {string} in the title")
-    public void theUserShouldSeeTheInTheTitle(String itemName) {
+    public void theUserShouldSeeTheInTheTitle(String pageTitle) {
         String actualTitle = Driver.get().getTitle();
-        assertTrue(actualTitle.contains(itemName));
+        assertTrue(actualTitle.contains(pageTitle));
     }
 
     @And("the user clicks Proceed to Checkout")
     public void theUserClicksProceedToCheckout() {
-        BrowserUtils.waitForClickablility(specificProductPage.proceedToCheckout,2);
         BrowserUtils.clickWithJS(specificProductPage.proceedToCheckout);
+        BrowserUtils.clickWithJS(specificProductPage.proceedToCheckout);
+        BrowserUtils.waitFor(3);
     }
+
+
+
+
+
+
 }
 
